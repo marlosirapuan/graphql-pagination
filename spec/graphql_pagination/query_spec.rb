@@ -10,10 +10,10 @@ RSpec.describe 'query spec' do
             name
           }
           metadata {
-            totalCount
-            totalPages
-            limitValue
-            currentPage
+            total_count
+            total_pages
+            limit_value
+            current_page
           }
         }
       }|
@@ -23,10 +23,10 @@ RSpec.describe 'query spec' do
       expect(result['collection'].size).to eq(2)
       expect(result['collection'][0]['id']).not_to be_empty
       expect(result['collection'][0]['name']).not_to be_empty
-      expect(result['metadata']['totalCount']).to eq(11)
-      expect(result['metadata']['totalPages']).to eq(6)
-      expect(result['metadata']['limitValue']).to eq(2)
-      expect(result['metadata']['currentPage']).to eq(2)
+      expect(result['metadata']['total_count']).to eq(11)
+      expect(result['metadata']['total_pages']).to eq(6)
+      expect(result['metadata']['limit_value']).to eq(2)
+      expect(result['metadata']['current_page']).to eq(2)
     end
   end
 
@@ -39,10 +39,10 @@ RSpec.describe 'query spec' do
             name
           }
           metadata {
-            totalCount
-            totalPages
-            limitValue
-            currentPage
+            total_count
+            total_pages
+            limit_value
+            current_page
           }
         }
       }|
@@ -52,10 +52,10 @@ RSpec.describe 'query spec' do
       expect(result['collection'].size).to eq(11)
       expect(result['collection'][0]['id']).not_to be_empty
       expect(result['collection'][0]['name']).not_to be_empty
-      expect(result['metadata']['totalCount']).to eq(11)
-      expect(result['metadata']['totalPages']).to eq(1)
-      expect(result['metadata']['limitValue']).to eq(25)
-      expect(result['metadata']['currentPage']).to eq(1)
+      expect(result['metadata']['total_count']).to eq(11)
+      expect(result['metadata']['total_pages']).to eq(1)
+      expect(result['metadata']['limit_value']).to eq(25)
+      expect(result['metadata']['current_page']).to eq(1)
     end
   end
 
@@ -68,10 +68,10 @@ RSpec.describe 'query spec' do
             name
           }
           metadata {
-            totalCount
-            totalPages
-            limitValue
-            currentPage
+            total_count
+            total_pages
+            limit_value
+            current_page
             customField
           }
         }
@@ -82,10 +82,10 @@ RSpec.describe 'query spec' do
       expect(result["collection"].size).to eq(11)
       expect(result["collection"][0]["id"]).not_to be_empty
       expect(result["collection"][0]["name"]).not_to be_empty
-      expect(result["metadata"]["totalCount"]).to eq(11)
-      expect(result["metadata"]["totalPages"]).to eq(1)
-      expect(result["metadata"]["limitValue"]).to eq(25)
-      expect(result["metadata"]["currentPage"]).to eq(1)
+      expect(result["metadata"]["total_count"]).to eq(11)
+      expect(result["metadata"]["total_pages"]).to eq(1)
+      expect(result["metadata"]["limit_value"]).to eq(25)
+      expect(result["metadata"]["current_page"]).to eq(1)
       expect(result["metadata"]["customField"]).to eq("custom_value")
     end
   end

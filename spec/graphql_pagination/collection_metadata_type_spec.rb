@@ -1,7 +1,7 @@
 RSpec.describe GraphqlPagination::CollectionMetadataType do
   describe '.fields' do
     it do
-      expect(described_class.fields.keys).to match_array(%w[currentPage limitValue totalCount totalPages])
+      expect(described_class.fields.keys).to match_array(%w[current_page limit_value total_count total_pages])
     end
   end
 

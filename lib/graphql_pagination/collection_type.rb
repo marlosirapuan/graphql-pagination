@@ -7,8 +7,8 @@ module GraphqlPagination
 
         Class.new(GraphQL::Schema::Object) do
           graphql_name type_name
-          field :collection, [source_type], null: false
-          field :metadata, metadata_type, null: false
+          field :collection, [source_type], null: false, camelize: false
+          field :metadata, metadata_type, null: false, camelize: false
 
           def collection
             object
